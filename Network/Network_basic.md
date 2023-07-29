@@ -109,6 +109,5 @@ Metric : Router(Switch) 가 최적의 경로를 결정하는 기준값.
 Network 에서 이동을 하면 비용이 발생하므로, Network 이동량이 커지면 비용을 고려하게 되고, 비용에 대한 하나의 주제로써 Metric 이 있다. Router 는 가장 적은 Metric 값을 갖는 경로를 찾게한다.
 
 
-
 [정보통신기술용어해설](http://www.ktword.co.kr/test/view/view.php?m_temp1=1919)
 [Network-Metric](https://onduway.tistory.com/3)
