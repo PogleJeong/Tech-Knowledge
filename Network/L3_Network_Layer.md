@@ -10,6 +10,9 @@ L3 : Network Layer
 ## [Encapsulation and Decapsualation](#3-Encapsulation-and-Decapsualation)
 
 ## [Packet 의 생성, 전달, 소멸](#4-Packet의-생성-전달-소멸)
+
+## [계층별 데이터 단위](#5-계층별-데이터-단위)
+
 # 1. IPv4 기본구조
 
 network 계층에서의 IPv4 주소는 32ibt(8bit * 4) 주소쳬게를 가지며, 0.0.0.0 ~ 255.255.255.255 의 주소를 가진다.
@@ -84,3 +87,16 @@ Driver 가 Packet 에 Ethernet Header 를 추가하여 Frame 으로 포장
 
 L2 Access Switch 를 타고, Router 로 이동, Router 를 통해 internet 으로 보내진다.
 
+
+# 5. 계층별 데이터 단위
+
+[User mode] - App
+
+Process
+|Socket|**Stream**|단위라기보다는 데이터덩어리|
+
+[Kernel mode] - OS
+
+|TCP|**Segment**|최대단위 Maximum Segment Size(MSS)-1460Byte|
+|IP|**Packet**|최대단위 Maximum Transmission Unit(MTU)-1500Byte|
+|L1 ~ L2| **Frame**|-|
